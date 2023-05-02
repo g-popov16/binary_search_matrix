@@ -1,4 +1,3 @@
-import time
 def binary_search_outer(low, high, array, x):
     if high >= low:
         mid = (low + high) // 2
@@ -27,34 +26,3 @@ def binary_search_inner(low, high, outer_mid, full_array, inner_array, x):
 
 
 mm = [[1, 4, 4, 13, 17, 22, 27, 28], [36, 38, 39, 41, 43, 44, 49], [51, 58, 62, 63, 67]]
-time_fast_start = time.time()
-print(binary_search_outer(0, 2, mm, 67))
-time_fast_end = time.time()
-print(time_fast_end - time_fast_start)
-
-
-def findAns(arr, target):
-    row = len(arr)
-    col = len(arr[0])
-    l, h = 0, row * col - 1
-
-    while (l <= h):
-        mid = l + (h - l) // 2
-
-        tC = mid % col
-        tR = mid // col
-        val = arr[tR][tC]
-        if (val == target):
-            return [tR, tC]
-        if (val < target):
-            l = mid + 1
-        else:
-            h = mid - 1
-
-    return [-1, -1]
-
-time_slow_start = time.time()
-print(findAns(mm, 67))
-time_slow_end = time.time()
-
-print(time_slow_end - time_slow_start)
