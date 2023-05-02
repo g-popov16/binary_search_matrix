@@ -26,3 +26,4 @@ def binary_search_inner(low, high, outer_mid, full_array, inner_array, x):
 
 
 mm = [[1, 4, 4, 13, 17, 22, 27, 28], [36, 38, 39, 41, 43, 44, 49], [51, 58, 62, 63, 67]]
+print(binary_search_outer(0, len(mm) - 1, mm, 93))
